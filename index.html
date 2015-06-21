@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Mr. Nex</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>"Mr. Nex" | grep develop > index.html</h1>
+        <h2>echo "(Mr. Nex's Developer Blog)" > ForNonHackers.txt</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/MrNex" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+          <a href="about.html" class="btn">About</a>
+	</section>
+      </div>
+    </header>
+
+    <div class="container">
+      {% for post in site.posts %}
+          <section id="main_content">
+
+            <h1>{{ post.title }}</h1>
+            <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
+
+              {{ post.content }}
+
+          </section>
+      {% endfor %}
+    </div>
+
+    
+  </body>
+</html>
